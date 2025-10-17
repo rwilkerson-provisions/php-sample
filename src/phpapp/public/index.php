@@ -108,7 +108,7 @@ ob_end_clean();
 <body>
     <div class="container">
         <div class="header">
-            <h1>Healthworks PHP Application</h1>
+            <h1>PHP Application</h1>
             <p>System Status Dashboard</p>
         </div>
         
