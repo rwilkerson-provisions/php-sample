@@ -76,14 +76,7 @@ docker ps
 From the project root directory:
 
 ```powershell
-cd src
-dotnet run --project apphost.cs
-```
-
-Or using the Aspire CLI:
-
-```powershell
-aspire run --project src/apphost.cs
+aspire run
 ```
 
 ### 4. Access Services
