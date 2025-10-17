@@ -1,0 +1,17 @@
+# src/phpapp/Dockerfile
+FROM php:8.3-apache
+
+# Install PDO + MySQL drivers
+RUN docker-php-ext-install pdo pdo_mysql mysqli && docker-php-ext-enable pdo_mysql mysqli
+
+# Apache document root
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
+ && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
+
+# Copy app
+COPY public/ /var/www/html/public/
+COPY vendor/ /var/www/html/vendor/
+
+# Optional: enable apache modules you need
+RUN a2enmod rewrite
