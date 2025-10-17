@@ -101,14 +101,14 @@ ob_end_clean();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>PHP Application Status</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>PHP Application</h1>
+            <h1>PHP Sample Application</h1>
             <p>System Status Dashboard</p>
         </div>
         
@@ -175,7 +175,7 @@ ob_end_clean();
         </div>
         
         <div class="footer">
-            <p>&copy; 2025 Healthworks PHP Application. Last updated: <?= date('Y-m-d H:i:s T') ?></p>
+            <p>Last updated: <?= date('Y-m-d H:i:s T') ?></p>
         </div>
     </div>
 </body>
